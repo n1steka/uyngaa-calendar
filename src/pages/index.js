@@ -38,15 +38,14 @@ function Main() {
 
   return (
     <div className="container mx-auto p-12  m-12">
-    
+
       <h1 className="text-3xl font-bold mb-4">{year} Calendar</h1>
       <div className="grid grid-cols-3 gap-4">
         {calendar.map((month, index) => (
-          <div key={index}  className="border p-4 rounded ">
-          <h2 className="text-xl font-semibold mb-2">{monthNames[index]}</h2>
-          <Link href={`/Home/${index}`}  className='underline  cursor-pointer text-red-500'> - Дэлгэрэнгүй -</Link>
-            <div className='p-2 m-2 text-blue-600'> Сар  : {index +1}  </div>
-            <div className="grid grid-cols-7 gap-2">
+          <div key={index} className="border p-4 rounded ">
+            <h2 className="text-xl font-semibold mb-2">{monthNames[index]}</h2>
+            <Link href={`/Home/${index}`} className='underline   cursor-pointer text-red-500'> - Дэлгэрэнгүй -</Link>
+            <div className="grid grid-cols-7 gap-2 mt-12">
               {dayNames.map((day, dayIndex) => (
                 <div key={dayIndex} className="text-sm text-center font-semibold">{day}</div>
               ))}
